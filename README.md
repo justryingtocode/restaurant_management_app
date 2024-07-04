@@ -29,8 +29,21 @@ These instructions will help you get a copy of the project up and running on you
 	Note: Both front-end and back-end code is in this repo. YOu will have to run those projects separately.
 	- npm run start
 
+![image](https://github.com/justryingtocode/restaurant_management_app/assets/51942207/af3fa154-834e-4079-af76-2a22c144826e)
+
 6. ### Admin Login
 	After project is running in browser you can admin login with
 - **Username**: `admin`
 - **Password**: `1234`
+
+7. ###After login 
+- There is restaurant listing page that will be seen from where we can add,edit search 
+![image](https://github.com/justryingtocode/restaurant_management_app/assets/51942207/b026863a-7db8-4811-8bc4-2af13e361610)
+
+8. ### Restaurant detail page
+- By clicking on restaurant name we will be routed to details page with menu
+![image](https://github.com/justryingtocode/restaurant_management_app/assets/51942207/b2a5539e-ff08-4385-adc3-e416c7149161)
+
+
+
 
