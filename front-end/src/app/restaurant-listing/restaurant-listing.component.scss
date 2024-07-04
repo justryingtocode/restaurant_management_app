@@ -11,7 +11,26 @@
   .right-addon .fa {
     right: 0px;
   }
+  .right-addon {
+    width: 230px; 
+    float: right;
+  }
   
   .right-addon input {
     padding-right: 30px;
+  }
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  @media (max-width: 576px) { 
+    .table-wrapper table {
+      width: 120%;
+    }
+    .right-addon {
+      width: 160px!important;
+    }
+    .teal-btn {
+      padding: 7px 16px !important;
+    }
   }

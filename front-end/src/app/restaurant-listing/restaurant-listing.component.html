@@ -1,7 +1,7 @@
 <h4 class="mt-4">Restaurant List</h4>
-<div class="row mt-3 text-right">
+<div class="row mt-3 text-right flex-nowrap">
     <div class="col-lg-9 col-sm-4">
-        <div class="inner-addon right-addon" style="width: 230px; float: right;">
+        <div class="inner-addon right-addon">
             <span>
                 <i class="fa fa-search card-title" aria-hidden="true"></i>
             </span>
@@ -17,50 +17,52 @@
         </button>
     </div>
 </div>
-<table class="table table-striped mt-4">
-    <thead>
-        <tr>
-            <th scope="col">Sl. No</th>
-            <th scope="col">Restaurant Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">State</th>
-            <th scope="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <ng-container *ngIf="filteredRestaurantList.length > 0; else noRestaurant">
-            <tr *ngFor="let restaurantObj of filteredRestaurantList;let i=index;">
-                <td>{{i+1}}</td>
-                <td>
-                    <a href="javascript:" (click)="navigate(restaurantObj?.restaurant_id)">
-                        {{restaurantObj?.restaurant_name}}</a>
-                </td>
-                <td>
-                    <span class="d-flex">
-                        {{restaurantObj?.address_line1}} - {{restaurantObj?.city_name}}
-                    </span>
-                </td>
-                <td>{{restaurantObj?.state_name}}</td>
-                <td>
-                    <img src="assets/images/pencil-edit-grey.svg" class="edit-icon"
-                        (click)="editRestaurantModal(restaurantObj)" data-backdrop="static" data-toggle="modal"
-                        data-target="#addEditRestaurants">
-                    <img src="assets/images/delete_app.svg" class="edit-icon" data-backdrop="static" data-toggle="modal"
-                        data-target="#deleteModal">
-                </td>
+<div class="table-wrapper">
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Sl. No</th>
+                <th scope="col">Restaurant Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">State</th>
+                <th scope="col">Action</th>
             </tr>
-        </ng-container>
-        <ng-template #noRestaurant>
-            <tr class="text-center">
-                <td colspan="4">
-                    <span>
-                        No data found
-                    </span>
-                </td>
-            </tr>
-        </ng-template>
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="filteredRestaurantList.length > 0; else noRestaurant">
+                <tr *ngFor="let restaurantObj of filteredRestaurantList;let i=index;">
+                    <td>{{i+1}}</td>
+                    <td>
+                        <a href="javascript:" (click)="navigate(restaurantObj?.restaurant_id)">
+                            {{restaurantObj?.restaurant_name}}</a>
+                    </td>
+                    <td>
+                        <span class="d-flex">
+                            {{restaurantObj?.address_line1}} - {{restaurantObj?.city_name}}
+                        </span>
+                    </td>
+                    <td>{{restaurantObj?.state_name}}</td>
+                    <td>
+                        <img src="assets/images/pencil-edit-grey.svg" class="edit-icon"
+                            (click)="editRestaurantModal(restaurantObj)" data-backdrop="static" data-toggle="modal"
+                            data-target="#addEditRestaurants">
+                        <img src="assets/images/delete_app.svg" class="edit-icon" data-backdrop="static"
+                            data-toggle="modal" data-target="#deleteModal">
+                    </td>
+                </tr>
+            </ng-container>
+            <ng-template #noRestaurant>
+                <tr class="text-center">
+                    <td colspan="4">
+                        <span>
+                            No data found
+                        </span>
+                    </td>
+                </tr>
+            </ng-template>
+        </tbody>
+    </table>
+</div>
 <ngb-pagination [collectionSize]="totalRecords" [(page)]="pageNumber" [maxSize]="5" [rotate]="true"
     [boundaryLinks]="true" (pageChange)="onPageChange()" />
 
@@ -70,8 +72,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">{{isEditMode ? 'Edit' : 'Add New'}} Restaurant</h5>
-                <button type="button" class="modal-close-button" (click)="isPopupOpen = false;" data-dismiss="modal" aria-label="Close"
-                    #closeRestaurantModel >
+                <button type="button" class="modal-close-button" (click)="isPopupOpen = false;" data-dismiss="modal"
+                    aria-label="Close" #closeRestaurantModel>
                     <span aria-hidden="true" class="modal-close">&times;</span>
                 </button>
             </div>

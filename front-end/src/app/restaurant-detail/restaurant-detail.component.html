@@ -4,7 +4,7 @@
             <button ngbNavLink>Menu</button>
             <ng-template ngbNavContent>
 
-                <div class="container d-flex g-10">
+                <div class="container d-flex g-10 flex-wrap">
                     <ng-container *ngFor="let imgObj of imageList">
                         <div class="menu-wrapper" [style.backgroundImage]="'url(' + imgObj?.url + ')'">
                             <div class="menu-wrapper-content w-100">
@@ -13,7 +13,7 @@
                             </div>
                         </div>
                     </ng-container>
-                    <div class="card border-0 p-4">
+                    <div class="border-0 p-4 mb-auto mt-auto">
                         <button class="btn btn-primary teal-btn add-Po-button m-auto">
                             <img class="add_Po mr-2" src="assets/images/add_symbol.svg">Add more
                         </button>
