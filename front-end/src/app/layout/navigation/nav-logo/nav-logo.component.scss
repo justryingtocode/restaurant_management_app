@@ -1,0 +1,44 @@
+.rest-logo {
+    // width: 25px;
+    height: 50px;
+    margin: 0 auto;
+    // width:-webkit-fill-available;
+    cursor:pointer;
+    z-index:200;
+}
+
+.rest-logo_block {
+    background: white !important;
+}
+
+
+.text-case {
+    text-transform: uppercase !important;
+    font-size: 15px !important;
+    position: relative !important;
+    top: 42px !important;
+    right: 57% !important;
+}
+.logo {
+    // margin-left: 27%;
+    width: -webkit-fill-available;
+    margin-top: 32%;
+}
+.small-icon{
+    display:none !important;
+}
+
+@-moz-document url-prefix() {
+    .logo-moz {
+        width:-moz-available;
+    }
+}
+
+
+.navbar-restaurant1--logo {
+  height: 30px;
+}
+
+.navbar-restaurant1-logo-small {
+  width: 40px;
+}

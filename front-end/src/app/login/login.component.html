@@ -1,0 +1,45 @@
+<div class="login-page">
+    <div class="card">
+        <div class="card-header p-0">
+            <h3 class="mb-4 mt-4 text-left">Sign in</h3>
+            <img src="assets/images/restaurant.png" class="login-logo user-avatar" />
+        </div>
+        <form [formGroup]="loginForm">
+            <div class="card-body">
+
+                <div class="form-group">
+                    <label for="usr">User Name</label>
+                    <input type="text" name="userName" class="form-control input-lg" placeholder="User Name"
+                    formControlName="user_name" minlength="2" maxlength="150">
+                    <!-- <div *ngIf="userName.errors?.required" class="alert alert-danger">
+                    Username is required
+                </div> -->
+                </div>
+                <div class="form-group">
+                    <label for="usr">Password</label>
+                    <input type="password" name="password" class="form-control input-lg" formControlName="password" />
+                </div>
+
+                <label class="link cursor-pointer">Forgot
+                    Password?</label>
+                <label class="font-weight-bold float-right">Need an account?
+                    <span class="link cursor-pointer">
+                        Sign up
+                    </span>
+                </label>
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn btn-md btn-primary mr-3" (click)="login()" appDebounceClick> <i class="fa fa-sign-in"
+                        aria-hidden="true"></i>
+                    &nbsp;Log
+                    In </button>
+                <button type="button" class="btn btn-md btn-cstorebo">
+                    Reset
+                </button>
+            </div>
+        </form>
+        <div class="form-group text-center mt-2 mb-0">
+            <label class="mt-2 fw-bold fs-4">We aim to serve you better!</label>
+        </div>
+    </div>
+</div>

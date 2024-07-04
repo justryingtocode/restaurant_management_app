@@ -1,0 +1,91 @@
+.pro-head {
+    display: flex;
+}
+.usertype {
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.navbar-nav {
+    position: relative;
+    right: 8%;
+    // display: flex;
+    // align-items: end;
+    .dropdown-clinic {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+}
+.pcoded-header .navbar-nav > li {
+    line-height: 50px !important;
+}
+.pcoded-header .dropdown .dropdown-toggle {
+    line-height: 50px !important;
+}
+
+.pro-head {
+    background: linear-gradient(to bottom, #064d95 0%, #244883 100%) !important;
+}
+
+.pcoded-header .dropdown.show:before {
+    color: #064d95 !important;
+}
+
+.logout_icon:hover {
+    color: #3f4d67;
+}
+.logout-icon{
+    height: 20px;
+    float: right;
+    position: relative;
+    left: 20%;
+    bottom: 30px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    width: 50px;
+}
+.user_image {
+    border-radius: 50%;
+}
+.doctor-img {
+    height: 50px !important;
+    width: 50px !important;
+    border-radius: 50%;
+    position: relative;
+    left: 15px;
+    top: 6px;
+}
+
+::ng-deep .pcoded-header .navbar-nav > li {
+  line-height: 20px !important;
+  padding-right: 0px !important;
+}
+
+.reception-login {
+  align-items: center;
+  display: flex !important;
+  justify-content: center;
+  margin-top: 8px;
+
+  .logout-icon {
+    position: inherit;
+  }
+}
+.profile_changes {
+    cursor: pointer;
+    width: 28px;
+    /* margin-left: 11px; */
+    position: absolute;
+    top: 17px;
+}
+.fixed_label {
+    position: relative;
+    top: 4px;
+    right: 20px;
+    font-weight: 500;
+}
+.min_width {
+    min-width: 110px!important;
+}

@@ -1,0 +1,125 @@
+$login-color: #333;
+.login-page {
+  // background-image: linear-gradient(25deg, #52bbfe, #0551a4);
+  background-image: linear-gradient(45deg, #BBD2C5, #536976);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  // background: $topnav-background-color;
+  color: $login-color;
+  padding: 3em;
+
+  .btn-primary {
+      outline: none !important;
+      padding: 5px !important;
+      border-radius: 6px !important;
+      border: 1px solid #cccccc !important;
+      background-color: #326398 !important;
+      color: #fff;
+      min-width: 120px;
+  }
+
+  .btn-primary:hover {
+      color: #333333 !important;
+  }
+
+  .btn-cstorebo {
+      outline: none !important;
+      padding: 5px !important;
+      border-radius: 6px !important;
+      border: 1px solid #cccccc !important;
+      margin-left: 0.5rem;
+  }
+
+  .card {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px 30px;
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+
+    .card-header {
+        border-bottom: none;
+        background-color: transparent; /* Make the header background transparent */
+        color: #333;
+        padding: 0; /* Remove padding */
+    }
+
+    h3 {
+        margin: 0 0 20px 0; /* Adjust the margin for spacing */
+    }
+
+    .card-body {
+        padding: 0 !important;
+        margin-top: 20px; /* Adjust margin for better spacing */
+    }
+
+    .login-logo {
+        position: absolute;
+        right: 20px;
+        top: 10px; /* Adjust position for better alignment */
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem; /* Consistent spacing between form groups */
+    }
+
+    .form-group label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        font-weight: 600 !important;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: calc(2.25rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem !important;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+  }
+
+  .alert.alert-danger {
+      color: red;
+      background-color: transparent;
+      border-color: transparent;
+      margin: 0;
+      padding: 0;
+      opacity: 1 !important;
+      top: 0 !important;
+      font-size: 12px !important;
+  }
+
+  .has-float-label .form-control:placeholder-shown:not(:focus) + * {
+      top: 0.6em !important;
+  }
+
+  .link {
+      color: #19b5fe;
+  }
+}
+:host {
+  display: block;
+}
+
+.login-logo {
+  width: 20%;
+  padding: 0rem;
+}
+::ng-deep .custom-style{
+  background-color:brown;
+  color:white;
+}

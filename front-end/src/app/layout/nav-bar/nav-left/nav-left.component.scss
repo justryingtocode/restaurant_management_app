@@ -1,0 +1,20 @@
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: rgb(187 203 249 / 90%);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: rgb(187 203 249 / 100%);
+  }
+  
+  .back-button i {
+    margin-right: 8px;
+  }

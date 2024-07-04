@@ -1,0 +1,38 @@
+<ng-scrollbar *ngIf="dattaConfig['layout'] === 'vertical'" id="nav-ps-datta" class="datta-scroll"
+  externalViewport=".my-custom-viewport" externalContentWrapper=".my-custom-content-wrapper">
+  <div class="navbar-content my-custom-viewport">
+    <ul class="nav pcoded-inner-navbar my-custom-content-wrapper">
+        <ng-container *ngFor="let item of navigation">
+          <app-nav-group *ngIf="item.type=='group'" [item]="item"></app-nav-group>
+          <app-nav-collapse *ngIf="item.type=='collapse'" [item]="item"></app-nav-collapse>
+          <app-nav-item *ngIf="item.type=='item'" [item]="item"></app-nav-item>
+        </ng-container>
+    </ul>
+  </div>
+</ng-scrollbar>
+<!-- <ng-scrollbar externalViewport=".my-custom-viewport"
+              externalContentWrapper=".my-custom-content-wrapper">
+  <div class="my-custom-viewport">
+    <div class="my-custom-content-wrapper">
+       <ul class="item-list">
+        <li class="item"><i class="fa fa-home"></i> Programs<i class="fa fa-chevron-right"></i></li>
+        <li class="item"><i class="fa fa-user"></i> Forms <i class="fa fa-chevron-right"></i></li>
+        <li class="item"><i class="fa fa-envelope"></i> Item 3 <i class="fa fa-chevron-right"></i></li>
+      </ul>
+    </div>
+  </div>
+</ng-scrollbar> -->
+<div *ngIf="dattaConfig['layout'] === 'horizontal'" class="navbar-content sidenav-horizontal" id="layout-sidenav">
+  <a href="javascript:" class="sidenav-horizontal-prev" [ngClass]="prevDisabled" (click)="scrollMinus()"></a>
+  <div #navbarWrapper class="sidenav-horizontal-wrapper"><!-- add 14-4 viral -->
+    <ul #navbarContent id="side-nav-horizontal" class="nav pcoded-inner-navbar sidenav-inner"
+      (clickOutside)="fireLeave()" (mouseleave)="fireLeave()">
+      <ng-container *ngFor="let item of navigation">
+        <app-nav-group *ngIf="item.type=='group'" [item]="item"></app-nav-group>
+        <app-nav-collapse *ngIf="item.type=='collapse'" [item]="item"></app-nav-collapse>
+        <app-nav-item *ngIf="item.type=='item'" [item]="item"></app-nav-item>
+      </ng-container>
+    </ul>
+  </div>
+  <a href="javascript:" class="sidenav-horizontal-next" [ngClass]="nextDisabled" (click)="scrollPlus()"></a>
+</div>

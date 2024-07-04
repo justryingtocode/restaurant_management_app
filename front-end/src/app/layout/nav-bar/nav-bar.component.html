@@ -1,0 +1,13 @@
+<header>
+  <div class="m-header" [style.display]="this.headerStyle">
+    <a class="mobile-menu" id="mobile-collapse1" href="javascript:" (click)="this.onNavCollapsedMob.emit();"><span></span></a>
+    <a  class="b-brand" > 
+        <img *ngIf="true" class="rest-logo" src="assets/images/restaurant.png" (click)="redirect()" >  
+    </a>
+  </div>
+  <a class="mobile-menu" [ngClass]="{'on' : this.menuClass}" id="mobile-header" href="javascript:" (click)="toggleMobOption()"><i class="feather icon-more-horizontal"></i></a>
+  <div class="collapse navbar-collapse header-shadow" [style.display]="this.collapseStyle">
+    <app-nav-left class="mr-auto" style="min-height:60px;" [style.display]="this.headerStyle"></app-nav-left>
+    <app-nav-right class="ml-auto" style="min-height:60px;" ></app-nav-right>
+  </div>
+</header>

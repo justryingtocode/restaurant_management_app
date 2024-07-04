@@ -1,0 +1,30 @@
+<form [formGroup]="addEditRestaurantForm">
+    <div class="row">
+        <div class="col-4">
+            <label>Restaurant name<span class="danger">*</span></label>
+            <input type="text" class="form-control" formControlName="restaurant_name">
+        </div>
+        <div class="col-4">
+            <label>Address line1<span class="danger">*</span></label>
+            <input type="text" class="form-control" placeholder="Enter address" formControlName="address_line1">
+        </div>
+        <div class="col-4">
+            <label>State</label>
+            <ng-select [items]="stateList" [loading]="isLoading" placeholder="Select state" formControlName="state_id"
+                bindValue="state_id" bindLabel="description" (change)="getCitiesList()">
+            </ng-select>
+        </div>
+        <div class="col-4">
+            <label>Cities</label>
+            <ng-select [items]="cityList" [loading]="isLoading" placeholder="Select city" formControlName="city_id"
+                bindValue="city_id" bindLabel="city_name">
+            </ng-select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button #cancelbtn1 class="btn btn-light" aria-label="Close" data-dismiss="modal" type="button"
+            (click)="resetRestaurantForm()">Cancel</button>
+        <button class="btn btn-primary teal-btn ml-2" type="button" (click)="addNewRestaurantDetails()">Submit
+        </button>
+    </div>
+</form>
